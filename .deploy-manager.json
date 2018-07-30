@@ -1,7 +1,8 @@
 {
     "scripts": [
         {
-            "step": "Lint",
+            "name": "lint",
+            "description": "Lint",
             "file": "./deploy-manager/scripts/lint.sh",
             "modes": {
                 "default": true,
@@ -11,7 +12,8 @@
             }
         },
         {
-            "step": "Remove node_modules folder",
+            "name": "remove-node_modules",
+            "description": "Remove node_modules folder",
             "file": "./deploy-manager/scripts/remove-node_modules.sh",
             "modes": {
                 "default": false,
@@ -21,29 +23,25 @@
             }
         },
         {
-            "step": "Remove package-lock.json file",
+            "name": "remove-package-lock",
+            "description": "Remove package-lock.json file",
             "file": "./deploy-manager/scripts/remove-package-lock.sh",
             "modes": {
                 "default": false
             }
         },
         {
-            "step": "Install npm packages",
+            "name": "npm-install",
+            "description": "Install npm packages",
             "file": "./deploy-manager/scripts/npm-install.sh",
             "modes": {
                 "default": true
             }
         },
         {
-            "step": "Launch the server",
-            "file": "./deploy-manager/scripts/npm-start.sh",
-            "modes": {
-                "default": true
-            }
-        },
-        {
             "disabled": true,
-            "step": "Run mocha tests",
+            "name": "run-mocha-tests",
+            "description": "Run mocha tests",
             "modes": {
                 "default": true,
                 "quickest-build": false,
@@ -51,8 +49,17 @@
             }
         },
         {
+            "name": "launch-server",
+            "description": "Launch the server",
+            "file": "./deploy-manager/scripts/npm-start.sh",
+            "modes": {
+                "default": true
+            }
+        },
+        {
             "disabled": true,
-            "step": "Deploy to pre-prod/prod",
+            "name": "deploy-to-pre-prod-or-prod",
+            "description": "Deploy to pre-prod/prod",
             "parameters": [
                 {
                     "name": "deploy-environment",
