@@ -1,0 +1,86 @@
+{
+    "scripts": [
+        {
+            "step": "Lint",
+            "file": "./deploy-manager/scripts/lint.sh",
+            "mode": {
+                "default": true,
+                "quick-build": false,
+                "quickest-build": false,
+                "clean-build": false
+            }
+        },
+        {
+            "step": "Remove node_modules folder",
+            "file": "./deploy-manager/scripts/remove-node_modules.sh",
+            "mode": {
+                "default": false,
+                "quick-build": false,
+                "quickest-build": false,
+                "clean-build": true
+            }
+        },
+        {
+            "step": "Remove package-lock.json file",
+            "file": "./deploy-manager/scripts/remove-package-lock.sh",
+            "mode": {
+                "default": false
+            }
+        },
+        {
+            "step": "Install npm packages",
+            "file": "./deploy-manager/scripts/npm-install.sh",
+            "mode": {
+                "default": true
+            }
+        },
+        {
+            "step": "Launch the server",
+            "file": "./deploy-manager/scripts/npm-start.sh",
+            "mode": {
+                "default": true
+            }
+        },
+        {
+            "disabled": true,
+            "step": "Run mocha tests",
+            "mode": {
+                "default": true,
+                "quickest-build": false,
+                "ci": true
+            }
+        },
+        {
+            "disabled": true,
+            "step": "Deploy to pre-prod/prod",
+            "parameters": [
+                {
+                    "name": "deploy-environment",
+                    "type": "select",
+                    "options": [
+                        {
+                            "option": "test",
+                            "value": "test"
+                        },
+                        {
+                            "option": "staging",
+                            "value": "staging"
+                        },
+                        {
+                            "option": "production",
+                            "value": "production"
+                        }
+                    ]
+                },
+                {
+                    "name": "version-number",
+                    "type": "input",
+                    "default": "minor"
+                }
+            ],
+            "mode": {
+                "default": false
+            }
+        }
+    ]
+}
