@@ -2,7 +2,7 @@
     "scripts": [
         {
             "name": "lint",
-            "description": "Lint",
+            "summary": "Lint",
             "file": "./deploy-manager/scripts/lint.sh",
             "modes": {
                 "default": true,
@@ -13,7 +13,7 @@
         },
         {
             "name": "remove-node_modules",
-            "description": "Remove node_modules folder",
+            "summary": "Remove node_modules folder",
             "file": "./deploy-manager/scripts/remove-node_modules.sh",
             "modes": {
                 "default": false,
@@ -24,7 +24,7 @@
         },
         {
             "name": "remove-package-lock",
-            "description": "Remove package-lock.json file",
+            "summary": "Remove package-lock.json file",
             "file": "./deploy-manager/scripts/remove-package-lock.sh",
             "modes": {
                 "default": false
@@ -32,7 +32,7 @@
         },
         {
             "name": "npm-install",
-            "description": "Install npm packages",
+            "summary": "Install npm packages",
             "file": "./deploy-manager/scripts/npm-install.sh",
             "modes": {
                 "default": true
@@ -41,7 +41,7 @@
         {
             "disabled": true,
             "name": "run-mocha-tests",
-            "description": "Run mocha tests",
+            "summary": "Run mocha tests",
             "modes": {
                 "default": true,
                 "quickest-build": false,
@@ -50,7 +50,7 @@
         },
         {
             "name": "launch-server",
-            "description": "Launch the server",
+            "summary": "Launch the server",
             "file": "./deploy-manager/scripts/npm-start.sh",
             "modes": {
                 "default": true
@@ -59,7 +59,7 @@
         {
             "disabled": true,
             "name": "deploy-to-pre-prod-or-prod",
-            "description": "Deploy to pre-prod/prod",
+            "summary": "Deploy to pre-prod/prod",
             "parameters": [
                 {
                     "name": "deploy-environment",
