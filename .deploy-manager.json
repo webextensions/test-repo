@@ -3,7 +3,7 @@
         {
             "step": "Lint",
             "file": "./deploy-manager/scripts/lint.sh",
-            "mode": {
+            "modes": {
                 "default": true,
                 "quick-build": false,
                 "quickest-build": false,
@@ -13,7 +13,7 @@
         {
             "step": "Remove node_modules folder",
             "file": "./deploy-manager/scripts/remove-node_modules.sh",
-            "mode": {
+            "modes": {
                 "default": false,
                 "quick-build": false,
                 "quickest-build": false,
@@ -23,28 +23,28 @@
         {
             "step": "Remove package-lock.json file",
             "file": "./deploy-manager/scripts/remove-package-lock.sh",
-            "mode": {
+            "modes": {
                 "default": false
             }
         },
         {
             "step": "Install npm packages",
             "file": "./deploy-manager/scripts/npm-install.sh",
-            "mode": {
+            "modes": {
                 "default": true
             }
         },
         {
             "step": "Launch the server",
             "file": "./deploy-manager/scripts/npm-start.sh",
-            "mode": {
+            "modes": {
                 "default": true
             }
         },
         {
             "disabled": true,
             "step": "Run mocha tests",
-            "mode": {
+            "modes": {
                 "default": true,
                 "quickest-build": false,
                 "ci": true
@@ -78,7 +78,7 @@
                     "default": "minor"
                 }
             ],
-            "mode": {
+            "modes": {
                 "default": false
             }
         }
