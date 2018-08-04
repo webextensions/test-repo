@@ -5,5 +5,3 @@ cd "$(dirname "$0")"
 
 # cd to the project's root folder
 cd ../..
-
-rm -f package-lock.json

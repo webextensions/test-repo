@@ -1,13 +1,24 @@
 {
+    "default_branch": "master",
     "scripts": [
         {
-            "name": "lint",
-            "summary": "Lint",
-            "file": "./deploy-manager/scripts/lint.sh",
+            "name": "restore-some-gitignored-files",
+            "summary": "Restore some of the gitignored files (which may help in providing faster build)",
+            "description": "Try to restore archived node_modules contents (if available), for faster installations",
+            "list": "./deploy-manager/scripts/list-of-gitignored-files-to-restore.sh",
             "modes": {
                 "default": true,
-                "quick-build": false,
-                "quickest-build": false,
+                "clean-build": false
+            }
+        },
+        {
+            "name": "use-node_modules-archive-or-npm-ci-or-npm-install-no-package-lock",
+            "summary": "Attempt to use an archived \"node_modules\" or run \"npm ci\" and if that doesn't work, attempt \"npm install --no-package-lock\"",
+            "file": "./deploy-manager/use-node_modules-archive-or-npm-ci-or-npm-install-no-package-lock.sh",
+            "modes": {
+                "default": true,
+                "quick-build": true,
+                "quickest-build": true,
                 "clean-build": false
             }
         },
@@ -35,7 +46,21 @@
             "summary": "Install npm packages",
             "file": "./deploy-manager/scripts/npm-install.sh",
             "modes": {
-                "default": true
+                "default": true,
+                "quick-build": false,
+                "quickest-build": false,
+                "clean-build": true
+            }
+        },
+        {
+            "name": "lint",
+            "summary": "Lint",
+            "file": "./deploy-manager/scripts/lint.sh",
+            "modes": {
+                "default": true,
+                "quick-build": false,
+                "quickest-build": false,
+                "clean-build": false
             }
         },
         {
@@ -49,11 +74,22 @@
             }
         },
         {
+            "name": "backup-some-gitignored-files",
+            "summary": "",
+            "description": "",
+            "list": "./deploy-manager/scripts/list-of-gitignored-files-to-backup.sh",
+            "modes": {
+                "default": true,
+                "custom": false
+            }
+        },
+        {
             "name": "launch-server",
             "summary": "Launch the server",
             "file": "./deploy-manager/scripts/npm-start.sh",
             "modes": {
-                "default": true
+                "default": true,
+                "ci": false
             }
         },
         {
