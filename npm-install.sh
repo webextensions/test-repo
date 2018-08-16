@@ -4,4 +4,4 @@
 cd "$(dirname "$0")"
 
 set -x
-./node_modules-archive/install.js --package-lock-must-be-in-sync-when-available
+./node_modules-archive/quick-install.js --package-lock-must-be-in-sync-when-available
