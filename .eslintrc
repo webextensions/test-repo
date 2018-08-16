@@ -3,9 +3,9 @@
     // https://gist.github.com/cletusw/e01a85e399ab563b1236
     "parserOptions": {
         "sourceType": "module",                     // https://github.com/AtomLinter/linter-eslint/issues/462#issuecomment-190770417
+        "ecmaVersion": 8,
         "ecmaFeatures": {                           // http://eslint.org/docs/user-guide/migrating-to-2.0.0#language-options
-            "jsx": true,
-            "experimentalObjectRestSpread": true
+            "jsx": true
         }
     },
     "env": {

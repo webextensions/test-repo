@@ -6,7 +6,8 @@
   "scripts": {
     "start": "http-server",
     "server": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "note-down": "^0.2.0"
   },
   "devDependencies": {
+    "eslint": "^5.3.0",
     "nodemon": "^1.18.3"
   }
 }
