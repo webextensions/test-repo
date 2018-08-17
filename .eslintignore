@@ -2,4 +2,4 @@
 
 # node_modules ignored by default
 
-node_modules-archive/utils/3rdparty/
+node_modules-archive/lib/utils/3rdparty/
