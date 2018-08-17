@@ -14,7 +14,7 @@
         {
             "name": "use-node_modules-archive-or-npm-ci-or-npm-install-no-package-lock",
             "summary": "Attempt to use an archived \"node_modules\" or run \"npm ci\" and if that doesn't work, attempt \"npm install --no-package-lock\"",
-            "file": "./deploy-manager/use-node_modules-archive-or-npm-ci-or-npm-install-no-package-lock.sh",
+            "file": "./deploy-manager/cacheable-node_modules-installation.sh",
             "modes": {
                 "default": true,
                 "quick-build": true,
