@@ -22,10 +22,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "http-server": "^0.11.1",
-    "note-down": "^0.2.2"
+    "note-down": "^0.2.3"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "nodemon": "^1.19.1"
   }
 }
